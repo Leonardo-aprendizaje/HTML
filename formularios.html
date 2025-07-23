@@ -6,39 +6,52 @@
     <title>Fomulario</title>
 </head>
 <body>
-    <form action="/pagina-processa-dados-do-form" method="post">
+    <form action="/formularios_dados.php" method="post">
         <fieldset>
             <legend>Dados Gerais</legend>
-            <label for="nome">Nome:</label>
-            <input type="text" minlength="8" id="nome">
-            <label for="data_nascimento">Data de Nascimento:</label>
-            <input type="text" id="data_nascimento">
-            <label for="cpf">CPF:</label>
-            <input type="text" minlength="11" id="cpf">
-        </fieldset>
 
+            <label for="nome">Nome:</label>
+            <input type="text" minlength="8" id="nome" required><br><br>
+
+            <label for="data_nascimento">Data de Nascimento:</label>
+            <input type="date" id="data_nascimento" required><br><br>
+
+            <label for="cpf">CPF:</label>
+            <input type="text" minlength="11" id="cpf" required><br><br>
+
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" required><br><br>
+
+            <label for="password">Senha:</label>
+            <input type="password" name="password" id="password" minlength="8">
+        </fieldset>
+        
         <fieldset>
             <legend>Endereço</legend>
             <label for="tipo_endereco">Tipo:</label>
-            <select id="tipo_endereco">
+            <select id="tipo_endereco" required>
                 <option value="">Selecione</option>
                 <option value="rua">Rua</option>
                 <option value="avenida">Avenida</option>
                 <option value="estrada">Estrada</option>
                 <option value="outros">Outros</option>
+                
             </select>
             <label for="logradouro_endereco">Logradouro:</label>
-            <input type="text" minlength="6" id="logradouro_endereco">
-            <label for="numero_endereco">Número:</label>
-            <input type="text" minlength="1" id="numero_endereco">
-            <label for="complemento_endereco">Complemento:</label>
-            <input type="text" id="complemento_endereco">
-        </fieldset>
+            <input type="text" minlength="2" id="logradouro_endereco" required><br><br>
 
+            <label for="numero_endereco">Número:</label>
+            <input type="text" minlength="1" id="numero_endereco" required><br><br>
+
+            <label for="complemento_endereco">Complemento:</label>
+            <input type="text" id="complemento_endereco" required>
+
+        </fieldset>
         <fieldset>
             <legend>Fale conosco</legend>
-            <label for="msg">Mensagem:</label>
-            <textarea type="text" id="msg"></textarea>
+
+        <label for="msg">Mensagem:</label>
+        <textarea type="text" id="msg"></textarea>
         </fieldset>
 
         <fieldset>
